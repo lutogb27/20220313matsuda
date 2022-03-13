@@ -11,9 +11,18 @@ class ContactController extends Controller
     {
         return view('index');
     }
-    public function create()
+
+    public function add()
     {
-        //
+        return view('add');
+    }
+    
+    public function create(Request $request)
+    {
+        $this->validate($request, Author::$rules);
+        $form = $request->all();
+        Author::create($form);
+        return redirect('/');
     }
     public function update(Request $request, $id)
     {
