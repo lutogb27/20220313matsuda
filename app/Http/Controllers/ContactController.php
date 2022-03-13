@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Models\Contact;
+use App\Models\Contact;
 
 class ContactController extends Controller
 {
@@ -19,9 +19,9 @@ class ContactController extends Controller
     
     public function create(Request $request)
     {
-        $this->validate($request, Author::$rules);
+        $this->validate($request, Contact::$rules);
         $form = $request->all();
-        Author::create($form);
+        Contact::c($form);
         return redirect('/');
     }
     public function update(Request $request, $id)
