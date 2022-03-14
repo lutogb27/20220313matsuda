@@ -15,7 +15,7 @@
       <div class="todo">
         <form action="/todo/create" method="POST"class="white">
           @csrf
-          <input type="text" class="form-add" value=" ">
+          <input type="text" class="form-add" value=" " name="content">
           <input class="button-add" type="submit" value="追加">
         </form>
         <table>
@@ -26,17 +26,19 @@
               <th>更新</th>
               <th>削除</th>
             </tr>
-            <form action="https://intense-reef-81125.herokuapp.com/todo/update?id=1494" method="post"></form>
             <td>
-              <input type="text" class="input-update" value="aa" name="content">
+              <input type="time">
+            </td>
+            <form action="http://127.0.0.1:8000/todo/update" method="post"></form>
+            <td>
+              <input type="text" class="input-update" value=" " name="content">
             </td>
             <td>
-              <form action="/todo/update" method="POST"class="white-up">
               <button class="button-update">更新</button>
               </form>
             </td>
             <td>
-              <form action="/todo/delete" method="POST"class="white-de">
+              <form action="http://127.0.0.1:8000/todo/delete" method="POST"class="white-de" name="content">
               <button class="button-delete">削除</button>
               </form>
             </td>

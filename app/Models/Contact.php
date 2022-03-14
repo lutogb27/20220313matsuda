@@ -12,4 +12,7 @@ class Contact extends Model
     public static $rules = array( 
         'form-add' => 'input-update',
     );
+    protected $fillable = [
+        'id',
+    ];
 }

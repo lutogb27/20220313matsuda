@@ -21,7 +21,7 @@ class ContactController extends Controller
     {
         $this->validate($request, Contact::$rules);
         $form = $request->all();
-        Contact::c($form);
+        Contact::create($form);
         return redirect('/');
     }
     public function update(Request $request, $id)
