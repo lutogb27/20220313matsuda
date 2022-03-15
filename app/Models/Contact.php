@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     use HasFactory;
-    protected $guarded = ['id','content','created_at','updated_at'];
+    protected $guarded = ['id','created_at','updated_at'];
     public static $rules = array( 
         'form-add' => 'input-update',
     );
     protected $fillable = [
-        'id',
+        'content',
     ];
 }

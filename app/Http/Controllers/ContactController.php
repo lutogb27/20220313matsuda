@@ -26,11 +26,14 @@ class ContactController extends Controller
     }
     public function update(Request $request, $id)
     {
-        //
+        $id->body = $request->body;
+        $id->save();
+        return redirect('/');
     }
     public function delete(Request $request, $id)
     {
-        //
+        $id->delete();
+        return redirect('/');
     }
 }
 
