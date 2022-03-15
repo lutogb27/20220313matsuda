@@ -13,6 +13,6 @@ class Contact extends Model
         'form-add' => 'input-update',
     );
     protected $fillable = [
-        'content',
+        'content'
     ];
 }

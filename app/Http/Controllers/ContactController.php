@@ -16,14 +16,15 @@ class ContactController extends Controller
     {
         return view('add');
     }
-    
     public function create(Request $request)
     {
         $this->validate($request, Contact::$rules);
         $form = $request->all();
+        return  $form;
         Contact::create($form);
         return redirect('/');
     }
+    
     public function update(Request $request, $id)
     {
         $id->body = $request->body;
