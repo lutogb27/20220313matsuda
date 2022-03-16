@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 
-class ContactController extends Controller
+class TodoController extends Controller
 {
     public function index()
     {
-        $Contacts = Contact::all();
+        $Todots = Todo::all();
 
-        return view('contacts.index', ['Contact'=> $Contacts]);
-        return view('contacts.index')->with('senddata', $Contacts);
+        return view('index', ['Todo'=> $Todos]);
+        return view('index')->with('senddata', $Todos);
     }
 
     public function add()
@@ -21,10 +21,10 @@ class ContactController extends Controller
     }
     public function create(Request $request)
     {
-        $this->validate($request, Contact::$rules);
+        $this->validate($request, Todo::$rules);
         $form = $request->all();
         //return  $form;
-        Contact::create($form);
+        Todo::create($form);
         return redirect('/');
     }
     

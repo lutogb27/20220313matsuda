@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\TodoController;
 
 
 /*
@@ -16,7 +16,7 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', [ContactController::class, 'index']);
-Route::post('/todo/create', [ContactController::class, 'create']);
-Route::post('/todo/update', [ContactController::class, 'update']);
-Route::post('/todo/delete', [ContactController::class, 'delete']);
+Route::get('/', [TodoController::class, 'index']);
+Route::post('/todo/create', [TodoController::class, 'create']);
+Route::post('/todo/update', [TodoController::class, 'update']);
+Route::post('/todo/delete', [TodoController::class, 'delete']);

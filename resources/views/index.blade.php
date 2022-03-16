@@ -12,8 +12,8 @@
   <div class="container">
     <div class="card">
       <p class="title">Todo List</p>
-        @foreach($Contacts as $Contacts)
-                {{ $Contacts-&gt;title }}: {{ $Contacts-&gt;body }} -{{ $Contacts-&gt;created_at }}
+        @foreach($Todos as $Todos)
+                {{ $Todos-&gt;title }}: {{ $Todos-&gt;body }} -{{ $Todos-&gt;created_at }}
         @endforeach
       <div class="todo">
         <form action="/todo/create" method="POST"class="white">
