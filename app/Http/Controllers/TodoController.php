@@ -11,7 +11,7 @@ class TodoController extends Controller
     {
         $Todots = Todo::all();
 
-        return view('index', ['Todo'=> $Todos]);
+        return view('index', ['Todos'=> $Todos]);
         return view('index')->with('senddata', $Todos);
     }
 
@@ -40,4 +40,3 @@ class TodoController extends Controller
         return redirect('/');
     }
 }
-
