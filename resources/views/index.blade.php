@@ -15,7 +15,7 @@
         @foreach($Todos as $Todos)
                 {{ $Todos-&gt;title }}: {{ $Todos-&gt;body }} -{{ $Todos-&gt;created_at }}
         @endforeach
-      <div class="todo">
+      <div class="spape">
         <form action="/todo/create" method="POST"class="white">
           @csrf
           <input type="text" class="form-add" value=" " name="content">
