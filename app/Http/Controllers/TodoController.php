@@ -9,12 +9,11 @@ class TodoController extends Controller
 {
     public function index()
     {
-        $Todots = Todo::all();
+        $todos = Todo::all();
 
-        return view('index', ['Todos'=> $Todos]);
-        return view('index')->with('senddata', $Todos);
+        return view('index', ['todos'=> $todos]);
+        return view('index')->with('senddata', $todos);
     }
-
     public function add()
     {
         return view('add');

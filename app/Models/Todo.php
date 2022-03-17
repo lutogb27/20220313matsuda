@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Todo extends Model
 {
-    protected $table = 'webtextdb.todo_contacts_teble';
+    protected $table = 'todos';
     use HasFactory;
-    protected $guarded = ['id','created_at','updated_at'];
+    //protected $guarded = [];
     public static $rules = array( 
         'form-add' => 'input-update',
     );
     protected $fillable = [
-        'content'
+        'created_at','updated_at','content'
     ];
 }

@@ -13,10 +13,11 @@ class TodoContactsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Todo', function (Blueprint $table) {
+        Schema::create('todos', function (Blueprint $table) {
             $table->id();
-            $table->string('Todo',191);
-            $table->timestamps();
+            $table->string('todo',191);
+            $table->timestamp('created_at')->useCurrent()->nullable();
+            $table->timestamp('updated_at')->useCurrent()->nullable();
         });
     }
 
@@ -27,6 +28,6 @@ class TodoContactsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Todo');
+        Schema::dropIfExists('todos');
     }
 }

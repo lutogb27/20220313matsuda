@@ -12,13 +12,10 @@
   <div class="container">
     <div class="card">
       <p class="title">Todo List</p>
-        @foreach($Todos as $Todos)
-                {{ $Todos-&gt;title }}: {{ $Todos-&gt;body }} -{{ $Todos-&gt;created_at }}
-        @endforeach
       <div class="spape">
         <form action="/todo/create" method="POST"class="white">
           @csrf
-          <input type="text" class="form-add" value=" " name="content">
+          <input type="text" class="form-add" value=" " name="todo">
           <input class="button-add" type="submit" value="追加">
         </form>
         <table>
@@ -30,7 +27,7 @@
               <th>削除</th>
             </tr>
             <td>
-              <input type="time">
+              
             </td>
             <form action="http://127.0.0.1:8000/todo/update" method="post"></form>
             <td>
