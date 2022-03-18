@@ -16,7 +16,16 @@ class TodoController extends Controller
     }
     public function add()
     {
-        return view('add');
+        return view('index.add');
+    } public function store(Request $request)
+    {
+        // tasksテーブルにフォームで入力した値を挿入する
+        $result = Task::create([
+            'content' => $request->content,
+        ]);
+
+        // タスク一覧画面にリダイレクト
+        return redirect()->route('index');
     }
     public function create(Request $request)
     {
