@@ -16,7 +16,7 @@ class TodoContactsTable extends Migration
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
             $table->string('todo',191);
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 
