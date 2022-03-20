@@ -29,9 +29,9 @@
             @foreach($todos as $todo)
             <form action="/todo/update" method="POST">
             @csrf
-            @method('update')
+            @method('patch')
             <td>
-              <input type="text" class="input-update" value="" name="content">
+              <input type="text" class="input-update" value="{{$todo->todo}}" name="content">
             </td>
             <td>
               <button class="button-update">更新</button>
