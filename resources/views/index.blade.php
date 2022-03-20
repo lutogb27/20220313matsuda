@@ -13,7 +13,7 @@
     <div class="card">
       <p class="title">Todo List</p>
       <div class="spape">
-        <form action="{{ route('todo.create') }}"method="POST"class="white">
+        <form action="/todo/create"method="POST"class="white">
           @csrf
           <input type="text" class="form-add" value=" " name="todo">
           <input class="button-add" type="submit" value="追加">
@@ -29,16 +29,16 @@
             <td>
               
             </td>
-            <form action="{{ route('todo.update') }}" method="post"></form>
+            <form action="/todo/update" method="POST"></form>
             <td>
-              <input type="text" class="input-update" value=" " name="content">
+              <input type="text" class="input-update" value="" name="content">
             </td>
             <td>
               <button class="button-update">更新</button>
               </form>
             </td>
             <td>
-              <form action="{{ route('todo.delete') }}"  method="POST"class="white-de" name="content">
+              <form action="/todo/delete"  method="POST"class="white-de" name="content">
               <button class="button-delete">削除</button>
               </form>
             </td>

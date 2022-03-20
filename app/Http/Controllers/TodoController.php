@@ -16,16 +16,7 @@ class TodoController extends Controller
     }
     public function add()
     {
-        return view('index.add');
-    } public function store(Request $request)
-    {
-        // tasksテーブルにフォームで入力した値を挿入する
-        $result = Task::create([
-            'content' => $request->content,
-        ]);
-
-        // タスク一覧画面にリダイレクト
-        return redirect()->route('index');
+        return view('add');
     }
     public function create(Request $request)
     {
@@ -35,18 +26,27 @@ class TodoController extends Controller
         Todo::create($form);
         return redirect('/');
     }
-    
+    public function edit(Request $request)
+    {
+        $todo = Todo::find($request->id);
+        return view('edit', ['form' => $todo]);
+    }
     public function update(Request $request)
 {
-    $todo = Todo::find($request->id);
-    $form = $request->all();
-    unset($form['_token']);
-    $article->fill($form)->save();
-    return redirect('/');
+    $this->validate($request, Todo::$rules);
+        $form = $request->all();
+        unset($form['_token']);
+        Author::where('id', $request->id)->update($form);
+        return redirect('/');
 }
     public function delete(Request $request, $id)
     {
-        $id->delete();
+        $author = Todo::find($request->id);
+        return view('delete', ['form' => $todo]);
+    }
+    public function remove(Request $request)
+    {
+        Todo::find($request->id)->delete();
         return redirect('/');
     }
 }
