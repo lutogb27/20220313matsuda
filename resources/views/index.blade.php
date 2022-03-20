@@ -26,10 +26,10 @@
               <th>更新</th>
               <th>削除</th>
             </tr>
-            <td>
-              
-            </td>
+            @foreach($todos as $todo)
             <form action="/todo/update" method="POST">
+            @csrf
+            @method('update')
             <td>
               <input type="text" class="input-update" value="" name="content">
             </td>
@@ -39,9 +39,12 @@
             </td>
             <td>
               <form action="/todo/delete"  method="POST"class="white-de" name="content">
+              @csrf
+              @method('delete')
               <button class="button-delete">削除</button>
               </form>
             </td>
+            @endforeach
           </tbody> 
         </table>
       </div>
