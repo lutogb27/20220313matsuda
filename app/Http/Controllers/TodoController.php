@@ -40,12 +40,13 @@ class TodoController extends Controller
     $this->validate($request, Todo::$rules);
         $form = $request->all();
         unset($form['_token']);
-        Author::where('id', $request->id)->update($form);
+        Todo::where('id', $request->id)->update($form);
         return redirect('/');
 }
     public function delete(Request $request, $id)
     {
         $author = Todo::find($request->id);
+        Todo::where('id', 1)->delete();
         return view('delete', ['form' => $todo]);
     }
     public function remove(Request $request)
