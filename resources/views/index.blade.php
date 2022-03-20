@@ -27,7 +27,7 @@
               <th>削除</th>
             </tr>
             @foreach($todos as $todo)
-            <form action="/todo/update" method="POST">
+            <form action="/todo/update/{{$todo->id}}" method="POST">
             @csrf
             @method('patch')
             <td>
@@ -38,7 +38,7 @@
               </form>
             </td>
             <td>
-              <form action="/todo/delete"  method="POST"class="white-de" name="content">
+              <form action="/todo/delete/{{$todo->id}}"  method="POST"class="white-de" name="content">
               @csrf
               @method('delete')
               <button class="button-delete">削除</button>
