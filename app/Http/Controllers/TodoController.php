@@ -14,6 +14,10 @@ class TodoController extends Controller
         return view('index', ['todos'=> $todos]);
         return view('index')->with('senddata', $todos);
     }
+    public function find()
+    {
+        return view('find', ['input' => '']);
+    }
     public function add()
     {
         return view('add');

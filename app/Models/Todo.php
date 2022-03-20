@@ -14,6 +14,6 @@ class Todo extends Model
         'form-add' => 'input-update',
     );
     protected $fillable = [
-        'created_at','updated_at','content'
+        'created_at','updated_at','todo'
     ];
 }

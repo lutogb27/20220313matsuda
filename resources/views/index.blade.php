@@ -29,7 +29,7 @@
             <td>
               
             </td>
-            <form action="/todo/update" method="POST"></form>
+            <form action="/todo/update" method="POST">
             <td>
               <input type="text" class="input-update" value="" name="content">
             </td>
