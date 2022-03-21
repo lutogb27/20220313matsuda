@@ -28,13 +28,13 @@
             </tr>
             @foreach($todos as $todo)
             <td>
-              {{$todo->created_at}}
+              <p class="test">{{$todo->created_at}} </p>
+              <form action="/todo/update/{{$todo->id}}" method="POST">
+              @csrf
+              <input type="hidden" name="_token" value="" class="tokei">
             </td>
-            @csrf  
-            <form action="/todo/update/{{$todo->id}}" method="POST">
-            @csrf
             <td>
-              <input type="text" class="input-update" value="{{$todo->todo}}" name="content">
+              <input type="text" class="input-update" value="{{$todo->todo}}" name="todo">
             </td>
             <td>
               <button class="button-update">更新</button>

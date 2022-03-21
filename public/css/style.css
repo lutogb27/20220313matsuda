@@ -11,7 +11,6 @@ body {
     position: relative;
 }
 
-
 .card {
     background-color: #fff;
     width: 50vw;
@@ -29,7 +28,8 @@ body {
     margin-bottom: 15px;
 }
 
-input, select {
+input,
+select {
     vertical-align: middle;
 }
 
@@ -58,15 +58,28 @@ input, select {
     outline: none;
 }
 
+.button-add:hover {
+    background-color: #dc70fa;
+    border-color: #dc70fa;
+    color: #fff;
+}
+
 table {
     text-align: center;
     width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
+}
+
+.thbody {
+    table-layout: fixed;
+}
+
+tr {
+    height: 50px;
+    width: 500px;
 }
 
 .input-update {
-    width: 90%;
+    width: 150px;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -88,6 +101,13 @@ table {
     transition: 0.4s;
     outline: none;
 }
+
+.button-update:hover {
+    background-color: #fa9770;
+    border-color: #fa9770;
+    color: #fff;
+}
+
 .button-delete {
     text-align: left;
     border: 2px solid #71fadc;
@@ -100,4 +120,20 @@ table {
     cursor: pointer;
     transition: 0.4s;
     outline: none;
+}
+
+.button-delete:hover {
+    background-color: #71fadc;
+    border-color: #71fadc;
+    color: #fff;
+}
+
+.white {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.test {
+    white-space: nowrap;
 }
