@@ -31,7 +31,6 @@
               <p class="test">{{$todo->created_at}}</p>
               <form action="/todo/update/{{$todo->id}}" method="POST">
               @csrf
-              <input type="hidden" name="_token" value="" class="tokei">
             </td>
             <td>
               <input type="text" class="input-update" value="{{$todo->todo}}" name="todo">
