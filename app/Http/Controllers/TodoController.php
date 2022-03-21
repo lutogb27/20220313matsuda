@@ -46,8 +46,8 @@ class TodoController extends Controller
     public function delete(Request $request, $id)
     {
         $author = Todo::find($request->id);
-        Todo::where('id', 1)->delete();
-        return view('delete', ['form' => $todo]);
+        Todo::where('id', $id)->delete();
+        return redirect('/');
     }
     public function remove(Request $request)
     {

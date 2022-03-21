@@ -29,7 +29,6 @@
             @foreach($todos as $todo)
             <form action="/todo/update/{{$todo->id}}" method="POST">
             @csrf
-            @method('patch')
             <td>
               <input type="text" class="input-update" value="{{$todo->todo}}" name="content">
             </td>
@@ -40,7 +39,6 @@
             <td>
               <form action="/todo/delete/{{$todo->id}}"  method="POST"class="white-de" name="content">
               @csrf
-              @method('delete')
               <button class="button-delete">削除</button>
               </form>
             </td>
