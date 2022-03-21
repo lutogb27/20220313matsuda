@@ -27,6 +27,10 @@
               <th>削除</th>
             </tr>
             @foreach($todos as $todo)
+            <td>
+              {{$todo->created_at}}
+            </td>
+            @csrf  
             <form action="/todo/update/{{$todo->id}}" method="POST">
             @csrf
             <td>
