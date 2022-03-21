@@ -74,12 +74,11 @@ table {
 }
 
 tr {
-    height: 50px;
-    width: 500px;
+    height: 200%;
 }
 
 .input-update {
-    width: 150px;
+    width: 100%;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;

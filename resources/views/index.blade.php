@@ -28,7 +28,7 @@
             </tr>
             @foreach($todos as $todo)
             <td>
-              <p class="test">{{$todo->created_at}} </p>
+              <p class="test">{{$todo->created_at}}</p>
               <form action="/todo/update/{{$todo->id}}" method="POST">
               @csrf
               <input type="hidden" name="_token" value="" class="tokei">
@@ -41,7 +41,7 @@
               </form>
             </td>
             <td>
-              <form action="/todo/delete/{{$todo->id}}"  method="POST"class="white-de" name="content">
+              <form action="/todo/delete/{{$todo->id}}"  method="POST"class="white-de" name="todo">
               @csrf
               <button class="button-delete">削除</button>
               </form>
