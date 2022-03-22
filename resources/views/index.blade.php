@@ -19,7 +19,6 @@
           <input class="button-add" type="submit" value="追加">
         </form>
         <table>
-          <tbody>
             <tr>
               <th>作成日</th>
               <th>タスク名</th>
@@ -27,6 +26,7 @@
               <th>削除</th>
             </tr>
             @foreach($todos as $todo)
+          <tbody>  
             <td>
               <p class="test">{{$todo->created_at}}</p>
               <form action="/todo/update/{{$todo->id}}" method="POST">
@@ -45,8 +45,8 @@
               <button class="button-delete">削除</button>
               </form>
             </td>
+          </tbody>
             @endforeach
-          </tbody> 
         </table>
       </div>
     </div>

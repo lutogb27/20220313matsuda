@@ -67,10 +67,11 @@ select {
 table {
     text-align: center;
     width: 100%;
+    table-layout: fixed;
 }
 
 .thbody {
-    table-layout: fixed;
+    display:flex;
 }
 
 tr {
